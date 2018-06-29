@@ -1,0 +1,44 @@
+body{
+ background-image: url("img/carrental.png");
+}
+
+
+nav div{
+ padding-left: 3em;
+ font-size: 1.2em;
+ background-color: blue;
+ color: white;
+}
+
+nav button{
+ border: none;
+ background-color: transparent;
+ font-weight: bold;
+}
+
+nav button:hover{
+ background-color: orange;
+ color: blue;
+}
+
+
+
+#phpsite{
+ width: 80vw;
+ height: 70vh;
+ margin-top: 2em;
+ margin-left: 5em;
+ border: none;
+ display: none;
+ opacity: 0.95;
+ background-color: lightgrey;
+ padding-left: 3em;
+ padding-top: 1em;
+}
+
+#phpsite iframe{
+ width: 100%;
+ height: 100%;
+ border: none;
+}
+
