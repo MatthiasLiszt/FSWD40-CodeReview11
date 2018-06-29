@@ -1,0 +1,15 @@
+insert into office (officeName,officeAddress)
+values ('Urania','Schottenring 12');
+
+insert into office (officeName,officeAddress)
+values ('Meidling','Meidlinger Hauptstrasse 3');
+
+insert into office (officeName,officeAddress)
+values ('Naschmarkt','Kettengasse 7');
+
+insert into office (officeName,officeAddress)
+values ('Hermelin','Herkratzgasse 9');
+
+insert into office (officeName,officeAddress)
+values ('Pinky','Panthergasse 6');
+

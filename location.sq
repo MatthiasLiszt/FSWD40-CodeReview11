@@ -1,0 +1,51 @@
+insert into location (carId,officeId)
+values (1,1);
+
+insert into location (carId,officeId)
+values (2,1);
+
+insert into location (carId,officeId)
+values (3,1);
+
+insert into location (carId,officeId)
+values (4,1);
+
+insert into location (carId,officeId)
+values (5,1);
+
+insert into location (carId,officeId)
+values (6,1);
+
+insert into location (carId,officeId)
+values (7,1);
+
+insert into location (carId,officeId)
+values (8,2);
+
+insert into location (carId,officeId)
+values (9,2);
+
+insert into location (carId,officeId)
+values (10,2);
+
+insert into location (carId,officeId)
+values (11,3);
+
+insert into location (carId,officeId)
+values (12,3);
+
+insert into location (carId,officeId)
+values (13,4);
+
+insert into location (carId,officeId)
+values (14,5);
+
+insert into location (carId,officeId)
+values (15,5);
+
+insert into location (carId,officeId)
+values (16,5);
+
+
+
+

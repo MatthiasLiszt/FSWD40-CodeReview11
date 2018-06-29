@@ -1,0 +1,39 @@
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Mazda',1.5,50,6,1991,50);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Suzuki',3.5,100,6,1997,90);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Skoda',2.5,70,6,1993,60);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Trabant',2.7,80,6,1996,70);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Yamaha',1.5,50,6,1991,50);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Honda',3.5,100,6,1997,90);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Wattburg',2.5,70,6,1993,60);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Jaguar',2.7,80,6,1996,70);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Bentley',1.5,50,6,1991,50);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Ferrari',3.5,100,6,1997,90);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Lada',2.5,70,6,1993,60);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Niva',2.7,80,6,1996,70);
+
+
+
+

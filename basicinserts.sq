@@ -1,0 +1,31 @@
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Fiat',1.5,50,6,1991,50);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Mercedes',3.5,100,6,1997,90);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('VW',2.5,70,6,1993,60);
+
+insert into car (carType,capacity,power,seats,prodYear,tankCapacity)
+values ('Opel',2.7,80,6,1996,70);
+
+insert into user (name, surname, birthday)
+values ('Max','Boehm','1981-11-11');
+
+insert into user (name, surname, birthday)
+values ('Stefan','Czerny','1981-12-11');
+
+insert into user (name, surname, birthday)
+values ('Andrzej','Pettyn','1979-10-21');
+
+insert into verification (userId,documentNumber, document)
+values (1,34523462,'passport');
+
+insert into verification (userId,documentNumber, document)
+values (2,65435567,'passport');
+
+insert into verification (userId,documentNumber, document)
+values (3,97834566,'passport');
+

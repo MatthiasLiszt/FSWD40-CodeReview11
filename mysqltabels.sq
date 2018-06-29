@@ -1,0 +1,133 @@
+
+create database cr11_Matthias_Liszt_php_car_rental character set utf8mb4;
+
+create table car(
+ carId int not null auto_increment,
+ carType varchar(32),
+ capacity int, 
+ power int, 
+ seats int, 
+ prodYear year,
+ tankCapacity int,
+ primary key(carId)
+);
+
+create table carRent(
+ transactionId int not null auto_increment, 
+ userId int,
+ carId int,
+ primary key(transactionId)
+);
+
+create table user(
+ userId int not null auto_increment, 
+ name varchar(16),
+ surname varchar(16),
+ birthday date,
+ primary key(userId)
+);
+
+create table verification( 
+ documentNumber int, 
+ userId int,
+ document varchar(32),
+ primary key(documentNumber)
+);
+
+create table carPrice(
+ carPriceId int not null auto_increment,
+ carId int, 
+ carPrice int,
+ primary key(carPriceId)
+);
+
+create table carTank(
+ tankId int not null auto_increment, 
+ carId int, 
+ volume int,
+ transactionId int,
+ primary key(tankId)
+);
+
+create table carDamage(
+ reportId int not null auto_increment, 
+ carId int,
+ damageId int, 
+ transactionId int,
+ primary key(reportId)
+);
+
+create table damages(
+ damageId int not null auto_increment,
+ name varchar(21),
+ description varchar(1024),
+ primary key(damageId)
+);
+
+create table payment(
+ paymentId int not null auto_increment,
+ transactionId int,
+ userId int,  
+ price int, 
+ paid tinyint,
+ serviceId int,
+ primary key(paymentId) 
+);
+
+create table damageCalculation(
+ calculationId int not null auto_increment,
+ transactionId int, 
+ carType varchar(32),
+ price int, 
+ primary key(calculationId)
+);
+
+create table additionalCharges(
+ aChargeId int not null auto_increment, 
+ transactionId int, 
+ price int, 
+ primary key (aChargeId)
+);
+
+create table paymentService(
+ serviceId int not null auto_increment, 
+ name varchar(16),
+ cardNumber int,
+ userId int,
+ primary key (serviceId)
+);
+
+create table gps(
+ gpsId int not null auto_increment,
+ carId int, 
+ gpsLat float,
+ gpsLong float,
+ primary key(gpsId)
+);
+
+create table carSign(
+ carSign varchar(16),
+ carId int,
+ primary key(carSign)
+);
+
+create table office(
+ officeId int not null auto_increment,
+ officeName varchar(32),
+ officeAddress varchar(64),
+ primary key(officeId)
+);
+
+create table location(
+ locationId int not null auto_increment,
+ carId int,
+ officeId int,
+ primary key(locationId)
+);
+
+create table userLog(
+ userName varchar(12),
+ userId int,
+ password varchar(255),
+ primary key(userName) 
+);

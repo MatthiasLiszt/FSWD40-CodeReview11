@@ -1,0 +1,53 @@
+insert into carSign (carId,carSign)
+values (1,'W-1234 AX');
+
+insert into carSign (carId,carSign)
+values (2,'W-3334 GH');
+
+insert into carSign (carId,carSign)
+values (3,'W-7774 DX');
+
+insert into carSign (carId,carSign)
+values (4,'W-8239 CE');
+
+insert into carSign (carId,carSign)
+values (5,'W-3234 OJ');
+
+insert into carSign (carId,carSign)
+values (6,'W-4434 SX');
+
+insert into carSign (carId,carSign)
+values (7,'W-2234 AE');
+
+insert into carSign (carId,carSign)
+values (8,'W-2134 EY');
+
+insert into carSign (carId,carSign)
+values (9,'W-2238 XE');
+
+insert into carSign (carId,carSign)
+values (10,'W-3238 UE');
+
+insert into carSign (carId,carSign)
+values (11,'W-5678 KU');
+
+insert into carSign (carId,carSign)
+values (12,'W-8765 WE');
+
+insert into carSign (carId,carSign)
+values (13,'W-4567 QW');
+
+insert into carSign (carId,carSign)
+values (14,'W-2345 YT');
+
+insert into carSign (carId,carSign)
+values (15,'W-1264 FG');
+
+insert into carSign (carId,carSign)
+values (16,'W-6234 DC');
+
+
+
+
+
+
