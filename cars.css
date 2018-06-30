@@ -1,6 +1,16 @@
 carlist, carType, carImage, carLocation{
- display: block
+ display: block;
 }
+
+carAddInfo{
+ font-size: 0.01em;
+ color: transparent;
+}
+
+carSeats, carPower, carYear{
+ display: block;
+}
+
 
 car{
  width: 144px;
@@ -9,6 +19,7 @@ car{
  margin-left: 1em;
  margin-top: 1em;
  padding: 1em;
+ background-color: transparent;
 }
 
 carlist{
@@ -23,4 +34,22 @@ carLocation{
 
 carImage img{
  width: 108px;
+}
+
+car:hover {
+ position: fixed;
+ top: 12px;
+ left: 12px;
+ background-color: orange;
+ font-size: 1.5em;
+ width: 288px;
+}
+
+car:hover img{
+ width: 216px;
+}
+
+car:hover carAddInfo{
+ font-size: 0.7em;
+ color: black;
 }

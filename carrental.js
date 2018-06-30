@@ -1,7 +1,8 @@
 
 var Login=false;
-
-var Sites={"offices": "office_list.php","cars": "cars_list.php","locFilter": "location_filter.php"};
+var Admin=false; // deals with a special Admin-User who's got administrator rights
+var Sites; //gets data from server after login
+var AdminSite; //link to special admin site is sent by server 
 
 $("#showOffices").click(function(){var iframe=`<iframe src="${Sites.offices}">`;
                                    //alert(iframe);
@@ -43,6 +44,11 @@ $('#register').click(function(){var iframe=`<iframe src="register.php">`;
                      $("#phpsite").show();
                     });
 
+$('#adminReport').click(function(){//alert('adminReport');
+                                   var iframe=`<iframe src="${AdminSite}">`;
+                                   $("#phpsite").html(iframe);
+                                   $("#phpsite").show();
+                                  });
 
 function doLogCheck(){
  var password=$('#password').val();
@@ -55,6 +61,7 @@ function doLogin(data){
  var logdata=JSON.parse(data);
  Login=logdata.Login;
  Sites=logdata.Sites;
+ Admin=logdata.Admin;
  if(Login)
   {$("#login").hide();
    $("#register").hide();
@@ -63,6 +70,12 @@ function doLogin(data){
    $("#showOffices").show();
    $("#officeSelect").show();
    $("#phpsite").text("you are successfully logged in");
+   if(Admin)
+    {$("#adminReport").show();
+     AdminSite=logdata.AdminSite;
+     var message="<span color='red'><h1>You have now special administrator rights !!!</h1></span>";
+     $('#phpsite').html(message); 
+    }
   }
 }
 
@@ -71,7 +84,7 @@ function doLogin(data){
 $('#login').click(function(){var loginForm=`<h1>LogIn Form</h1>
 
                                               <p><input type="text" placeholder="username" id="username"></p>
-                                              <p><input type="password" placeholder="password" id="password"></p>
+                                              <p><input type="password" placeholder="pas$sword" id="password"></p>
                                               <p><button onclick="doLogCheck()">logIn</button></p>
                                              `;
 
@@ -86,8 +99,10 @@ function initPage(){
    $('#showOffices').hide();
    $('#officeSelect').hide();
    $('#logout').hide();
+   $('#adminReport').hide();
   }
  
 }
 
 initPage();
+

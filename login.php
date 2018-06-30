@@ -15,12 +15,18 @@
 
  if(isInDatabase($connect,$username,$hash))
   { $logdata="{ \"Login\": true, \"Sites\": ";
-    $logdata.="{\"offices\": \"office_list.php\",\"cars\": \"cars_list.php\",\"locFilter\": \"location_filter.php\",\"register\": \"register.php\"}";
+    $logdata.="{\"offices\": \"office_list.php\",\"cars\": \"cars_list.php\",\"locFilter\": \"location_filter.php\"},";
+    $logdata.=" \"Admin\": false ";
     $logdata.="}";
-    
+    if($username=="Admin")
+     {$logdata="{ \"Login\": true, \"Sites\": "; 
+      $logdata.="{\"offices\": \"office_list.php\",\"cars\": \"cars_list.php\",\"locFilter\": \"location_filter.php\"},";
+      $logdata.=" \"Admin\": true, \"AdminSite\": \"report.php\" ";
+      $logdata.="}";
+     }
   }
  else
-  {$logdata="{ \"Login\": false, Sites: {\"nothing\": \"nothing\"}";}
+  {$logdata="{ \"Login\": false, Sites: {\"nothing\": \"nothing\"}, Admin: false}";}
 
 
  echo $logdata;

@@ -11,12 +11,12 @@
 
   function getCarsFilteredByLocation($connect,$loc){
    if($loc!=0)
-    {$sql="select location.carId,car.carId,car.carType from car ";
+    {$sql="select location.carId,car.carId,car.carType,car.seats,car.prodYear,car.power from car ";
      $sql.="inner join location on car.carId=location.carId where location.officeId=";
      $sql.=$loc;
     }
    else
-    {$sql="select location.carId,car.carId,car.carType from car ";
+    {$sql="select location.carId,car.carId,car.carType,car.seats,car.prodYear,car.power from car ";
      $sql.="inner join location on car.carId=location.carId";
     }
    
@@ -27,6 +27,11 @@
       {echo "<car>";
        echo "<carImage><image src='car/car".$row['carId'].".jpeg'></carImage>";
        echo "<carType>".$row['carType']."</carType>";
+       echo "<carAddInfo>";
+       echo "<carSeats>".$row['seats']." seats</carSeats>";
+       echo "<carPower>".$row['power']." kW</carPower>";
+       echo "<carYear>".$row['prodYear']."</carYear>";
+       echo "</carAddInfo>";
        echo "</car>";
        
        

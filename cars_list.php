@@ -10,7 +10,9 @@
 
 
   function getCarList($connect){
-   $sql="select location.carId,car.carId,car.carType,office.officeName from car inner join location on car.carId=location.carId inner join office on office.officeId=location.officeId";
+   $sql="select location.carId,car.carId,car.carType,office.officeName,car.power,car.seats,";
+   $sql.="car.prodYear from car inner join location on car.carId=location.carId";
+   $sql.=" inner join office on office.officeId=location.officeId";
    
    $result=mysqli_query($connect,$sql);
    $pdo=array();
@@ -21,6 +23,11 @@
        echo "<carImage><img src='car/car".$row['carId'].".jpeg'></carImage>";
        echo "<carType>".$row['carType']."</carType>";
        echo "<carLocation>".$row['officeName']."</carLocation>";
+       echo "<carAddInfo>";
+       echo "<carSeats>".$row['seats']. " seats</carSeats>";
+       echo "<carPower>".$row['power']. " kW</carPower>";
+       echo "<carYear>".$row['prodYear']. "</carYear>";
+       echo "</carAddInfo>";
        echo "</car>";
        
        

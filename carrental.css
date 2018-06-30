@@ -1,5 +1,7 @@
 body{
  background-image: url("img/carrental.png");
+ background-size: cover;
+ background-position: center;
 }
 
 
@@ -21,7 +23,16 @@ nav button:hover{
  color: blue;
 }
 
+nav select{
+ background-color: transparent;
+ border: none;
+}
 
+nav select > option{
+ background-color: blue;
+ color: white;
+ font-weight: bold;
+}
 
 #phpsite{
  width: 80vw;
@@ -42,3 +53,14 @@ nav button:hover{
  border: none;
 }
 
+#adminReport{
+ background-color: yellow;
+ color: black;
+}
+
+#adminReport:hover{
+ background-color: transparent;
+ color: yellow;
+ border: solid yellow 2px;
+ border-radius: 6px;
+}
