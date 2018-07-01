@@ -21,7 +21,7 @@
     if($username=="Admin")
      {$logdata="{ \"Login\": true, \"Sites\": "; 
       $logdata.="{\"offices\": \"office_list.php\",\"cars\": \"cars_list.php\",\"locFilter\": \"location_filter.php\"},";
-      $logdata.=" \"Admin\": true, \"AdminSite\": \"report.php\" ";
+      $logdata.=" \"Admin\": true, \"AdminSite\": \"report.php\" , \"gpsTracking\": \"gps.php\" ";
       $logdata.="}";
      }
   }

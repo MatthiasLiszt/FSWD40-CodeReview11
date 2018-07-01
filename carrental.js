@@ -3,6 +3,7 @@ var Login=false;
 var Admin=false; // deals with a special Admin-User who's got administrator rights
 var Sites; //gets data from server after login
 var AdminSite; //link to special admin site is sent by server 
+var GpsTracking; //link to special site for gps-tracking for admin is sent by server
 
 $("#showOffices").click(function(){var iframe=`<iframe src="${Sites.offices}">`;
                                    //alert(iframe);
@@ -20,7 +21,7 @@ $("#showCars").click(function(){var iframe=`<iframe src="${Sites.cars}">`;
 
 $.get("officelist.php",function(data){initOfficeSelect(data);});
 
-function initOfficeSelect(data){
+function initOfficeSelect(data){ 
  var options=[];
  var o=`<option value='0'>---</option>`;
  var json=JSON.parse(data);
@@ -50,6 +51,13 @@ $('#adminReport').click(function(){//alert('adminReport');
                                    $("#phpsite").show();
                                   });
 
+$('#gpsTracking').click(function(){//alert(GpsTracking);
+                                   var iframe=`<iframe src="${GpsTracking}">`;
+                                   $("#phpsite").html(iframe);
+                                   $("#phpsite").show();
+                                  });
+
+
 function doLogCheck(){
  var password=$('#password').val();
  //alert(password);
@@ -70,9 +78,12 @@ function doLogin(data){
    $("#showOffices").show();
    $("#officeSelect").show();
    $("#phpsite").text("you are successfully logged in");
+   
    if(Admin)
     {$("#adminReport").show();
+     $("#gpsTracking").show();
      AdminSite=logdata.AdminSite;
+     GpsTracking=logdata.gpsTracking; 
      var message="<span color='red'><h1>You have now special administrator rights !!!</h1></span>";
      $('#phpsite').html(message); 
     }
@@ -84,7 +95,7 @@ function doLogin(data){
 $('#login').click(function(){var loginForm=`<h1>LogIn Form</h1>
 
                                               <p><input type="text" placeholder="username" id="username"></p>
-                                              <p><input type="password" placeholder="pas$sword" id="password"></p>
+                                              <p><input type="password" placeholder="password" id="password"></p>
                                               <p><button onclick="doLogCheck()">logIn</button></p>
                                              `;
 
@@ -100,6 +111,7 @@ function initPage(){
    $('#officeSelect').hide();
    $('#logout').hide();
    $('#adminReport').hide();
+   $('#gpsTracking').hide();
   }
  
 }

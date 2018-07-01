@@ -9,9 +9,9 @@ function showMap(lat,lng,key){
  var mapUrl="https://maps.googleapis.com/maps/api/js";
  var callback='initMap';
  var apiCall=`${mapUrl}?key=${key}&callback=${callback}`;
- alert(apiCall);
+ //alert(apiCall);
  $('#map').text('failed');
- //$.getScript(apiCall);
+ $.getScript(apiCall);
 }
 
 function initMap() {

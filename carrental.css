@@ -53,12 +53,12 @@ nav select > option{
  border: none;
 }
 
-#adminReport{
+#adminReport, #gpsTracking{
  background-color: yellow;
  color: black;
 }
 
-#adminReport:hover{
+#adminReport:hover, #gpsTracking:hover{
  background-color: transparent;
  color: yellow;
  border: solid yellow 2px;

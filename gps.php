@@ -16,6 +16,12 @@ button{
  background-color: transparent;
  color: blue;
 }
+
+#map{
+ width: 144px;
+ height: 144px;
+ border: none;
+}
 </style>
 </head>
 <body>
